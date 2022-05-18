@@ -1,0 +1,16 @@
+<%= form_for @restaurant do |f| %>
+
+  <%= f.label :name, "Enter the name of the restaurant" %>
+  <%= f.string_field :name %>
+
+  <%= f.label :address, "Where is the restaurant?" %>
+  <%= f.string_field :address %>
+
+  <%= f.label :phone_number, "What is its phone number?" %>
+  <%= f.string_field :phone_number %>
+
+  <%= f.label :category, "What type of food?" %>
+  <%= f.string_field :category %>
+
+  <%= f.submit %>
+<% end %>
