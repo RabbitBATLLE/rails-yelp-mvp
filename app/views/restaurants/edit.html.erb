@@ -1,16 +1,8 @@
-<%= form_for @restaurant do |f| %>
-
-  <%= f.label :name, "Enter the name of the restaurant" %>
-  <%= f.string_field :name %>
-
-  <%= f.label :address, "Where is the restaurant?" %>
-  <%= f.string_field :address %>
-
-  <%= f.label :phone_number, "What is its phone number?" %>
-  <%= f.string_field :phone_number %>
-
-  <%= f.label :category, "What type of food?" %>
-  <%= f.string_field :category %>
-
-  <%= f.submit %>
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name, :label => 'Enter the name of the restaurante' %>
+  <%= f.input :address, :label => 'Where is the restaurant?' %>
+  <%= f.input :phone_number, :label => 'What is its phone number?' %>
+  <%= f.input :category, :label => 'Which type of food?' %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <%= f.button :submit %>
 <% end %>
